@@ -13,17 +13,43 @@
 </head>
 <body>
   
-<div id="choropleth_map"></div>
+<div id="choropleth_map">
+
+  <h2>Global CO2 Contribution Per Capita</h2>
+        <!-- pure grid group -->
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis1" class="vis-container"></div>
+            </div>
+        </div>
+        <!-- end pure grid group -->
+        <br>
+
+            <hr class="hr3">
+
+            <h2>Global CO2 Contribution in 2021</h2>
+            <!-- pure grid group -->
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div id="vis2" class="vis-container"></div>
+                </div>
+            </div>
+            <!-- end pure grid group -->
+            <br>
+
+            <hr class="hr3">
+
+</div>
 
 <script type="text/javascript">
 
   var spec1 = "js/choropleth_map.vg.json";
-  vegaEmbed('#choropleth_map', spec2).then(function(result) {
+  vegaEmbed('#choropleth_map', spec1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
   var spec2 = "js/bubble_chart.vg.json";
-  vegaEmbed('#vis1', spec1);
+  vegaEmbed('#bubble_chart', spec2);
 
 </script>
 
